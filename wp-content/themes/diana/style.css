@@ -80,8 +80,10 @@ a {
   text-decoration: none;
   color: #000000;
 }
-body.block {
-  overflow: hidden;
+html.modal-open {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 header {
   width: 1160px;
@@ -91,6 +93,7 @@ header {
 }
 header #logo {
   float: left;
+  display: block;
 }
 header #logo img {
   display: block;
@@ -116,9 +119,11 @@ header #main-title {
   line-height: 14px;
   letter-spacing: 6px;
   color: #000000;
-  width: 200px;
+  width: 320px;
   margin: 0 auto;
   margin-top: 17px;
+  display: block;
+  text-align: center;
 }
 header nav {
   float: right;
@@ -133,61 +138,162 @@ header nav {
 header nav ul li a.active::before {
   content: ">> ";
 }
+header nav ul li a:hover:before {
+  content: ">> ";
+}
 #main {
-  width: 1212px;
   margin: 0 auto;
+  max-width: 1235px;
 }
 #main .isotope {
-  max-width: 1212px;
+  max-width: 1235px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#main .isotope.project {
+  max-width: 924px;
+}
+#main .isotope.project .item {
+  cursor: default;
+}
+#main .isotope.project .item.c1 {
+  width: 450px;
+  height: 690px;
+}
+#main .isotope.project p.item {
+  display: block;
+  width: 100%;
+  font-family: 'avenir_lt_std65_medium';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #000000;
+  margin: 5px 0 20px 0;
 }
 #main .isotope .item {
+  display: block;
   float: left;
-  width: 394px;
   margin-bottom: 15px;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  margin-left: 10px;
 }
-#main .isotope .item.w2 {
-  width: 835px;
+#main .isotope .item .like {
+  width: 13px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  background: url(img/like-gris.png);
+  background-size: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-#main .isotope .item.w3 {
-  width: 367px;
+#main .isotope .item.c1 {
+  width: 395px;
+  height: 594px;
+}
+#main .isotope .item.c2 {
+  width: 834px;
+  height: 557px;
+}
+#main .isotope .item.c3 {
+  width: 366px;
+  height: 557px;
 }
 #main .isotope .item a {
   display: block;
 }
-#about {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  z-index: 1;
+#main .isotope .item:hover .item-info-box {
+  opacity: 1;
 }
-#about .shader {
+#main .isotope .item:hover .like {
+  opacity: 1;
+}
+#main .isotope .item .item-info-box {
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 45px;
+  right: 45px;
+  bottom: 45px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#main .isotope .item .item-info-box .item-info-shader {
+  background: #000000;
+  opacity: 0.45;
+  height: 100%;
+  width: 100%;
+}
+#main .isotope .item .item-info-box .item-info {
+  font-family: 'avenir_lt_std65_medium';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 8px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -18px;
+  display: block;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 127px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+.modal.contact-box .box1 {
+  height: 240px;
+  margin-top: -145px;
+}
+.modal.contact-box .box1 p {
+  text-align: center;
+}
+.modal .shader {
   background: #fff;
   opacity: 0.8;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 5;
-  top: 127px;
+  top: 0px;
 }
-#about .about-box {
+.modal .box1 {
   width: 250px;
-  height: 230px;
+  height: 240px;
   position: absolute;
   z-index: 10;
   top: 50%;
   left: 50%;
   margin-left: -125px;
-  margin-top: -115px;
+  margin-top: -145px;
   text-align: center;
 }
-#about .about-box img {
+.modal .box1 img {
   display: inline-block;
   margin-bottom: 40px;
 }
-#about .about-box p {
+.modal .box1 p {
   font-family: 'avenir_lt_std65_medium';
   text-transform: uppercase;
   text-align: justify;
@@ -195,6 +301,39 @@ header nav ul li a.active::before {
   line-height: 18px;
   letter-spacing: 2px;
   color: #000000;
+}
+.social-icons {
+  list-style: none;
+  text-align: center;
+  margin-top: 30px;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0 8px;
+}
+.social-icons li a {
+  display: block;
+  background-size: 100% !important;
+  width: 17px;
+  height: 17px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.social-icons li a:hover {
+  opacity: 0.9;
+}
+.social-icons li a.fb {
+  background: url(img/social-fb.png);
+}
+.social-icons li a.tw {
+  background: url(img/social-tw.png);
+}
+.social-icons li a.vimeo {
+  background: url(img/social-vimeo.png);
+}
+.social-icons li a.ig {
+  background: url(img/social-ig.png);
 }
 /* clear fix */
 .isotope:after {
