@@ -167,6 +167,9 @@ header nav ul li {
 #main .content.project .item {
   cursor: default;
 }
+#main .content.project .item img {
+  width: 100%;
+}
 #main .content.project p.item {
   display: block;
   width: 100%;
@@ -178,18 +181,14 @@ header nav ul li {
   color: #000000;
   margin: 5px 0 20px 0;
 }
-#main .content .item {
-  display: block;
-  float: left;
-  margin-bottom: 15px;
+#main .content .gallery_container {
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover !important;
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
-#main .content .item .like {
+#main .content .gallery_container:hover .like {
+  opacity: 1;
+}
+#main .content .like {
   width: 13px;
   height: 12px;
   display: block;
@@ -205,6 +204,17 @@ header nav ul li {
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+#main .content .item {
+  display: block;
+  float: left;
+  margin-bottom: 15px;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  margin-right: 15px;
+}
 #main .content .item.c3 {
   width: 395px;
   height: 594px;
@@ -215,7 +225,6 @@ header nav ul li {
 }
 #main .content .item.c1 {
   width: 100%;
-  height: 594px;
 }
 #main .content .item.last {
   margin-right: 0;
@@ -224,9 +233,6 @@ header nav ul li {
   display: block;
 }
 #main .content .item:hover .item-info-box {
-  opacity: 1;
-}
-#main .content .item:hover .like {
   opacity: 1;
 }
 #main .content .item .item-info-box {
