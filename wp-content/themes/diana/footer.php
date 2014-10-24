@@ -24,6 +24,7 @@
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins.js"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/isotope.js"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/project.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

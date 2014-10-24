@@ -3,16 +3,16 @@
 ?>
 <?php get_header(); ?>
 
-<header>
-    <a id="logo" href="/">
+<header class="clearfix">
+    <a id="logo" href="/" class="clearfix">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
         <h2>PHOTO PRODUCTION <br/>ART DIRECTION <br/>& DESIGN</h2>
     </a>
     <nav>
         <ul>
-            <li><a href="javascript:void(0)" class="active">see all projects</a></li>
-            <li><a href="javascript:void(0)" onclick="aboutbox()">about</a></li>
-            <li><a href="javascript:void(0)" onclick="contactbox()">contact</a></li>
+            <li><a href="javascript:void(0)" class="menuitem active">see all projects</a></li>
+            <li><a href="javascript:void(0)" class="menuitem" onclick="modal('aboutModal')">about</a></li>
+            <li><a href="javascript:void(0)" class="menuitem" onclick="modal('contactModal')">contact</a></li>
         </ul>
     </nav>
     <a id="main-title" href="javascript:void(0)" onclick="modaltoggle()">CIVIT · FALL/WINTER 14-15</a>
@@ -35,5 +35,6 @@
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/project-6.jpg" width="1200" height="523">
 	<span href="javascript:void(0)" class="like"></span>
 </div>
+
 
 <?php get_footer(); ?>

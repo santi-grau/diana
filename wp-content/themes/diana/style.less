@@ -185,7 +185,7 @@ header{
 		margin: 0 auto;
 		margin-bottom: 20px;
 		&.project{
-			width: 805px;
+			max-width: 805px;
 			.item{
 				cursor: default;
 				img{
@@ -421,8 +421,44 @@ header{
 
 @media only screen and (max-width : 768px) {
 	header{
-		width: 300px;
+		max-width: 480px;
+		height: 90px;
+		#main-title{
+			display: none;
+		}
+	}
+	#main{
+		.content{
+			max-width: 300px;
+			.item{
+				&.c3{
+					width: 100%;
+					height: 397px;
+				}
+				&.c2{
+					width: 100%;
+					height: 397px;
+				}
+			}
+			&.project{
+				max-width: 480px;
+				.item{
+					&.c3{
+						width: 100%;
+						height: 397px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	header{
+		max-width: 300px;
+		height: auto;
 		#logo{
+			float: none;
 			h2{
 				margin-left: 16px;
 				width: 119px;
@@ -432,10 +468,10 @@ header{
 			display: none;
 		}
 		nav{
-			margin-top: 15px;
-			margin-bottom: 15px;
+			margin-top: 25px;
+			margin-bottom: 25px;
 			text-align: left;
-			float: left;
+			float: none;
 			ul{
 				li{
 					a{
@@ -459,25 +495,12 @@ header{
 	}
 	#main{
 		.content{
-			width: 300px;
-			.item{
-				&.c3{
-					width: 100%;
-					height: 397px;
-				}
-				&.c2{
-					width: 100%;
-					height: 397px;
-				}
-			}
 			&.project{
-				width: 300px;
-				.item{
-					&.c3{
-						width: 100%;
-						height: 397px;
-					}
-				}
+				max-width: 300px;
+			}
+			.gallery_container{
+				width: 100% !important;
+				height: auto !important;
 			}
 		}
 	}
