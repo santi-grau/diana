@@ -102,19 +102,20 @@ a{
 	color: @mainblack;
 }
 
-html{
+body{
+	width: 100%;
 	&.modal-open{
-	    position: fixed; 
-	    overflow-y: scroll;
-	    width: 100%;
+		position: fixed; 
+		overflow-y: scroll;
 	}
 }
-
 header{
 	width: 1160px;
 	margin: 0 auto;
 	height: 90px;
 	padding-top: 37px;
+	z-index: 2;
+	position: relative;
 	#logo{
 		float: left;
 		display: block;
@@ -180,7 +181,7 @@ header{
 	.isotope{
 		max-width: 1235px;
 		margin: 0 auto;
-  		margin-bottom: 20px;
+		margin-bottom: 20px;
 		&.project{
 			max-width: 924px;
 			.item{
@@ -193,7 +194,7 @@ header{
 			p.item{
 				display: block;
 				width: 100%;
-	    		font-family: 'avenir_lt_std65_medium';
+				font-family: 'avenir_lt_std65_medium';
 				text-transform: uppercase;
 				text-align: center;
 				font-size: 8px;
@@ -288,55 +289,47 @@ header{
 .modal{
 	position: fixed;
 	z-index: 1;
-	top: 127px;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	display: none;
-	&.contact-box{
-		.box1{
-			@h: 240px;
-			height: @h;
-			margin-top: -@h/2-25px;
-			p{
-				text-align: center;
-			}
-		}
-	}
-	.shader{
-		background: #fff;
-		opacity: 0.8;
-		position: absolute;
-		width: 100%;
+	opacity: 0;
+	top : 100%;
+	width: 100%;
+	height: 100%;
+	transition: top 0s 0.5s, opacity 0.5s 0s;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+	&:before{
+		content: '';
+		display: inline-block;
 		height: 100%;
-		z-index: 5;
-		top: 0px;
+		vertical-align: middle;
+		margin-right: -0.25em;
 	}
-	.box1{
-		@h: 240px;
-		@w: 250px;
-		width: @w;
-		height: @h;
-		position: absolute;
-		z-index: 10;
-		top: 50%;
-		left: 50%;
-		margin-left: -@w/2;
-		margin-top: -@h/2-25px;
-		text-align: center;
+	.box{
+		width: 250px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: default;
 		img{
-			display: inline-block;
+			display: inline;
 			margin-bottom: 40px;
 		}
 		p{
-    		font-family: 'avenir_lt_std65_medium';
+			font-family: 'avenir_lt_std65_medium';
 			text-transform: uppercase;
-			text-align: justify;
+			text-align: center;
 			font-size: 8px;
 			line-height: 18px;
 			letter-spacing: 2px;
 			color: @mainblack;
+			&.justify{
+				text-align: justify;
+			}
 		}
+	}
+	&.active{
+		top: 0;
+		opacity: 1;
+		transition: top 0s, opacity 0.5s;
+		cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXhJREFUeNrMWE1PAkEMbfj/epSTCAuCIIqsoMCC4cbN/2A8mfgPOOBs0jG4wk5nt9PpS5rsx+zOS6ev7QwAwIexHejD3NhXfpEZOxh7UkTuBjn9Om6ED2YKyCXIJSu+uMcXzxrJFUlOIpC7xrnXroEDHJgKkmvjnAvqB9aTU0FBrH0/fBBQdwvneKv6g1FA4TgFQcUwgCftsq64fsgpnI6vIKgYMwjHqnUTKqiHNSpOl3tZXcJJYwjCN08+clYIbtwRPGkFsYxV3MuE066bhLlwquKoIVcUTtPYRayYc+ESiR3QgyxoMBLcn7lWgeTIc1cKOvM/6J1IJTYFvWghtyopi/PYW8NMuFXzirlXwti+dEx2KnQlVRoM8X5uHJpkj6GfCyYczq6Efd/d9RAEFX1gOgtKAhb+2mdBtwLNZuWKI7bBORIO2ZOUChGK5IQacwuQx8DlyZCC8BVOei7PbSA+/pGcxd4alsTkNr/5NPYO+pCH2vePAAMA4Qq1J1Y5XRMAAAAASUVORK5CYII=) 20 20, move;
 	}
 }
 
