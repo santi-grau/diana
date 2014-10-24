@@ -116,6 +116,7 @@ header{
 	padding-top: 37px;
 	z-index: 2;
 	position: relative;
+	pointer-events: none;
 	#logo{
 		float: left;
 		display: block;
@@ -161,6 +162,7 @@ header{
 		color: @mainblack;
 		ul{
 			li{
+				pointer-events: auto;
 				a{
 					&.active::before{
 						content: ">> ";

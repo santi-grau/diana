@@ -7,8 +7,8 @@ $( function() {
 	});
 });
 var modal = function(targetID){
-	$('.modal.active').removeClass('active');
 	$('body').toggleClass('modal-open');
+	$('.modal.active').removeClass('active');
 	$('#'+targetID).addClass('active');
 }
 var closeModal = function(){
