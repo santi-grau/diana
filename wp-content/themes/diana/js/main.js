@@ -6,6 +6,11 @@ $( function() {
 		}
 	});
 });
+		$("nav").hover(function(){
+		    $('nav ul li a.active::before').hide();
+		},function(){
+		    $('nav ul li a.active::before').show();
+		});
 var modal = function(targetID){
 	$('body').toggleClass('modal-open');
 	$('.modal.active').removeClass('active');

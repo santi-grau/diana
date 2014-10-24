@@ -20,18 +20,24 @@
 
 <div id="main">
 
-<div class="isotope project">
-	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-1.jpg) no-repeat center center">
+<div class="content project clearfix">
+	<a href="javascript:void(0)" class="item c3" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-1.jpg) no-repeat center center">
 		<span href="javascript:void(0)" class="like"></span>
 	</a>
-	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-2.jpg) no-repeat center center">
+	<a href="javascript:void(0)" class="item c3 last" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-2.jpg) no-repeat center center">
 		<span href="javascript:void(0)" class="like"></span>
 	</a>
 	<p class="item">PHOTOGRAPHY: RAUL RUZ | STYLISM: MONICA ZAFRA | MAKE-UP&HAIR: JOSE SEQUI</p>
-	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-3.jpg) no-repeat center center">
+	<a href="javascript:void(0)" class="item c3" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-3.jpg) no-repeat center center">
 		<span href="javascript:void(0)" class="like"></span>
 	</a>
-	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-4.jpg) no-repeat center center">
+	<a href="javascript:void(0)" class="item c3 last" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-4.jpg) no-repeat center center">
+		<span href="javascript:void(0)" class="like"></span>
+	</a>
+	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-5.jpg) no-repeat center center">
+		<span href="javascript:void(0)" class="like"></span>
+	</a>
+	<a href="javascript:void(0)" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/project-6.jpg) no-repeat center center">
 		<span href="javascript:void(0)" class="like"></span>
 	</a>
 </div>

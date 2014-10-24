@@ -20,20 +20,20 @@
 
 <div id="main">
 
-<div class="isotope">
-	<a href="project" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-1.jpg) no-repeat center center">
+<div class="content clearfix">
+	<a href="project" class="item c3" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-1.jpg) no-repeat center center">
 		<div class="item-info-box">
 			<div class="item-info-shader"></div>
 			<div class="item-info">CIVIT F/W 14-15<br/>BY RAUL RUIZ</div>
 		</div>
 	</a>
-	<a href="project" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-2.jpg) no-repeat center center">
+	<a href="project" class="item c3" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-2.jpg) no-repeat center center">
 		<div class="item-info-box">
 			<div class="item-info-shader"></div>
 			<div class="item-info">CIVIT F/W 14-15<br/>BY RAUL RUIZ</div>
 		</div>
 	</a>
-	<a href="project" class="item c1" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-3.jpg) no-repeat center center">
+	<a href="project" class="item c3 last" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-3.jpg) no-repeat center center">
 		<div class="item-info-box">
 			<div class="item-info-shader"></div>
 			<div class="item-info">CIVIT F/W 14-15<br/>BY RAUL RUIZ</div>
@@ -45,7 +45,7 @@
 			<div class="item-info">CIVIT F/W 14-15<br/>BY RAUL RUIZ</div>
 		</div>
 	</a>
-	<a href="project" class="item c3" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-5.jpg) no-repeat center center">
+	<a href="project" class="item c3 last" style="background:url(<?php bloginfo('stylesheet_directory'); ?>/img/home-5.jpg) no-repeat center center">
 		<div class="item-info-box">
 			<div class="item-info-shader"></div>
 			<div class="item-info">CIVIT F/W 14-15<br/>BY RAUL RUIZ</div>

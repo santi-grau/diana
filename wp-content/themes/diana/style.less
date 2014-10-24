@@ -120,6 +120,7 @@ header{
 	#logo{
 		float: left;
 		display: block;
+		pointer-events: auto;
 		img{
 			display: block;
 			float: left;
@@ -161,37 +162,32 @@ header{
 		letter-spacing: 2px;
 		color: @mainblack;
 		ul{
+			li a.active::before {
+			  content: ">> ";
+			}
+			&:hover li a::before {
+  				content: none;
+			}
+			li a:hover:before {
+			  content: ">> ";
+			}
 			li{
 				pointer-events: auto;
-				a{
-					&.active::before{
-						content: ">> ";
-					}
-					&:hover:before{
-							content: ">> ";
-					}
-				}
 			}
 		}
-
 	}
 }
 
 #main{
 	margin: 0 auto;
-	max-width: 1235px;
-	.isotope{
-		max-width: 1235px;
+	.content{
+		width: 1215px;
 		margin: 0 auto;
 		margin-bottom: 20px;
 		&.project{
-			max-width: 924px;
+			width: 805px;
 			.item{
 				cursor: default;
-				&.c1{
-					width: 450px;
-					height: 690px;
-				}
 			}
 			p.item{
 				display: block;
@@ -214,7 +210,7 @@ header{
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover !important;
-			margin-left: 10px;
+			margin-right: 15px;
 			.like{
 				width: 13px;
 				height: 12px;
@@ -229,17 +225,20 @@ header{
 				opacity: 0;
 				.animate();
 			}
-			&.c1{
+			&.c3{
 				width: 395px;
 				height: 594px;
 			}
 			&.c2{
-				width: 834px;
-				height: 557px;
+				width: 805px;
+				height: 594px;
 			}
-			&.c3{
-				width: 366px;
-				height: 557px;
+			&.c1{
+				width: 100%;
+				height: 594px;
+			}
+			&.last{
+				margin-right: 0;
 			}
 			a{
 				display: block;
@@ -373,12 +372,107 @@ header{
 	transition: @property  @time @easing;
 }
 
-
 /* clear fix */
 .isotope:after {
   content: '';
   display: block;
   clear: both;
+}
+
+@media only screen and (max-width : 1024px) {
+	header{
+		width: 768px;
+		#main-title{
+			display: none;
+		}
+	}
+	#main{
+		.content{
+		width: 822px;
+			.item{
+				&.c3{
+					width: 264px;
+					height: 397px;
+				}
+				&.c2{
+					width: 100%;
+					height: 397px;
+				}
+			}
+			&.project{
+				.item{
+					&.c3{
+						width: 395px;
+						height: 594px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	header{
+		width: 300px;
+		#logo{
+			h2{
+				margin-left: 16px;
+				width: 119px;
+			}
+		}
+		#main-title{
+			display: none;
+		}
+		nav{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			text-align: left;
+			float: left;
+			ul{
+				li{
+					a{
+						&.active::before{
+							content: "";
+						}
+						&:hover:before{
+								content: "";
+						}
+						&.active::after{
+							content: " <<";
+						}
+						&:hover:after{
+								content: " <<";
+						}
+					}
+				}
+			}
+
+		}
+	}
+	#main{
+		.content{
+			width: 300px;
+			.item{
+				&.c3{
+					width: 100%;
+					height: 397px;
+				}
+				&.c2{
+					width: 100%;
+					height: 397px;
+				}
+			}
+			&.project{
+				width: 300px;
+				.item{
+					&.c3{
+						width: 100%;
+						height: 397px;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* ==========================================================================
