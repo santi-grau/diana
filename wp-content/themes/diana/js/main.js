@@ -1,22 +1,16 @@
 $( function() {
-  $('.isotope').isotope({
-    itemSelector: '.item',
-    masonry: {
-      	columnWidth: 10,
-    }
-  });
+	$('.isotope').isotope({
+		itemSelector: '.item',
+		masonry: {
+			columnWidth: 10,
+		}
+	});
 });
-function aboutbox(){
-	$('.modal.about-box').fadeToggle();
-	$('html').toggleClass('modal-open');
-	$('.modal.contact-box').fadeOut();
+var modal = function(targetID){
+	$('body').toggleClass('modal-open');
+	$('.modal.active').removeClass('active');
+	$('#'+targetID).addClass('active');
 }
-function contactbox(){
-	$('.modal.contact-box').fadeToggle();
-	$('html').toggleClass('modal-open');
-	$('.modal.about-box').fadeOut();
-}
-function modaltoggle(){
-	$('.modal').fadeOut();
-	$('html').toggleClass('modal-open');
+var closeModal = function(){
+	$('.modal').removeClass('active')
 }

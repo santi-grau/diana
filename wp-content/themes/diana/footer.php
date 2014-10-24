@@ -1,16 +1,14 @@
         </div>
 
-        <div class="modal about-box">
-            <a class="shader" href="javascript:void(0)" onclick="aboutbox()"></a>
-            <div class="box1">
+        <div class="modal about-box" id="aboutModal" onclick="closeModal()">
+            <div class="box">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum dolor in risus mattis lobortis at a nulla. Fusce tincidunt mauris sit amet ante consequat, vitae maximus neque pulvinar. Suspendisse sed elit id nibh molestie dignissim. Suspendisse ac libero metus.</p>
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum dolor in risus mattis lobortis at a nulla. Fusce tincidunt mauris sit amet ante consequat, vitae maximus neque pulvinar. Suspendisse sed elit id nibh molestie dignissim. Suspendisse ac libero metus.</p>
             </div>
         </div>
 
-        <div class="modal contact-box">
-            <a class="shader" href="javascript:void(0)" onclick="contactbox()"></a>
-            <div class="box1">
+        <div class="modal contact-box" id="contactModal" onclick="closeModal()">
+            <div class="box">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
                 <p>c / lepant 264, 3 A<br />08013 barcelona (spain)<br />+34 933 198 394<br />+34 610 900 024<br/><br/>info@diana-bada.com</p>
                 <ul class="social-icons">

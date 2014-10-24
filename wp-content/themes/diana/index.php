@@ -10,9 +10,9 @@
     </a>
     <nav>
         <ul>
-            <li><a href="javascript:void(0)" class="active">see all projects</a></li>
-            <li><a href="javascript:void(0)" onclick="aboutbox()">about</a></li>
-            <li><a href="javascript:void(0)" onclick="contactbox()">contact</a></li>
+            <li><a href="javascript:void(0)" class="menuitem active">see all projects</a></li>
+            <li><a href="javascript:void(0)" class="menuitem" onclick="modal('aboutModal')">about</a></li>
+            <li><a href="javascript:void(0)" class="menuitem" onclick="modal('contactModal')">contact</a></li>
         </ul>
     </nav>
     <a id="main-title" href="javascript:void(0)" onclick="modaltoggle()">all projects</a>
