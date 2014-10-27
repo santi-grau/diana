@@ -14,3 +14,8 @@ var modal = function(targetID){
 var closeModal = function(){
 	$('.modal').removeClass('active')
 }
+
+setTimeout(function() {
+    $('footer a').attr('href', 'mailto:hello@diana-bada.com');
+}, 100);
+

@@ -19,6 +19,10 @@
                 </ul>
             </div>
         </div>
+
+        <footer>
+            DIANA BADA OTERO | <a>HELLO@DIANA-BADA.COM</a> | 93 319 83 94 · 610 90 00 24 | LEPANT 264, 3A 08013 BARCELONA (SPAIN)
+        </footer>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins.js"></script>

@@ -159,7 +159,7 @@ header nav ul li {
 #main .content {
   width: 1215px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 #main .content.project {
   max-width: 805px;
@@ -170,7 +170,7 @@ header nav ul li {
 #main .content.project .item img {
   width: 100%;
 }
-#main .content.project p.item {
+#main .content.project p.project-info {
   display: block;
   width: 100%;
   font-family: 'avenir_lt_std65_medium';
@@ -179,7 +179,7 @@ header nav ul li {
   font-size: 8px;
   letter-spacing: 2px;
   color: #000000;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 15px 0;
 }
 #main .content .gallery_container {
   position: relative;
@@ -188,6 +188,17 @@ header nav ul li {
 #main .content .gallery_container:hover .like {
   opacity: 1;
 }
+#main .content .gallery_container::after {
+  border-right: 15px solid #ffffff;
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 100%;
+  width: 15px;
+  right: -10px;
+  top: 0;
+  z-index: 10;
+}
 #main .content .like {
   width: 13px;
   height: 12px;
@@ -195,7 +206,7 @@ header nav ul li {
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: 1;
+  z-index: 100;
   background: url(img/like-gris.png);
   background-size: 100%;
   cursor: pointer;
@@ -203,6 +214,18 @@ header nav ul li {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+#main .content .like.home-like {
+  position: static;
+  opacity: 1;
+  background: url(img/like-blanco.png);
+  background-size: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#main .content .like.home-like:hover {
+  background: url(img/like-azul.png);
+  background-size: 100%;
 }
 #main .content .item {
   display: block;
@@ -238,10 +261,10 @@ header nav ul li {
 #main .content .item .item-info-box {
   position: absolute;
   z-index: 1;
-  top: 45px;
-  left: 45px;
-  right: 45px;
-  bottom: 45px;
+  top: 7%;
+  left: 7%;
+  right: 7%;
+  bottom: 7%;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -348,6 +371,22 @@ header nav ul li {
 .social-icons li a.ig {
   background: url(img/social-ig.png);
 }
+footer {
+  display: block;
+  width: 1215px;
+  font-family: 'avenir_lt_std65_medium';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #000000;
+  margin: 0 auto;
+  margin-top: 11px;
+  margin-bottom: 25px;
+}
+footer a:hover {
+  color: #0006f5;
+}
 /* clear fix */
 .isotope:after {
   content: '';
@@ -369,12 +408,15 @@ header nav ul li {
     height: 397px;
   }
   #main .content .item.c2 {
-    width: 100%;
+    width: 543px;
     height: 397px;
   }
   #main .content.project .item.c3 {
     width: 395px;
     height: 594px;
+  }
+  footer {
+    max-width: 768px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -386,15 +428,22 @@ header nav ul li {
     display: none;
   }
   #main .content {
-    max-width: 300px;
+    max-width: 556px;
   }
   #main .content .item.c3 {
-    width: 100%;
+    width: 264px;
     height: 397px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  #main .content .item.c3.last {
+    margin-right: 7px;
   }
   #main .content .item.c2 {
-    width: 100%;
+    width: 264px;
     height: 397px;
+    margin-right: 7px;
+    margin-left: 7px;
   }
   #main .content.project {
     max-width: 480px;
@@ -402,6 +451,9 @@ header nav ul li {
   #main .content.project .item.c3 {
     width: 100%;
     height: 397px;
+  }
+  footer {
+    max-width: 480px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -437,12 +489,28 @@ header nav ul li {
   header nav ul li a:hover:after {
     content: " <<";
   }
+  #main .content {
+    max-width: 300px;
+  }
   #main .content.project {
     max-width: 300px;
   }
   #main .content .gallery_container {
     width: 100% !important;
     height: auto !important;
+  }
+  #main .content .item.c3 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #main .content .item.c2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  footer {
+    max-width: 300px;
   }
 }
 /* ==========================================================================

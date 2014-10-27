@@ -29,14 +29,13 @@ function Gallery(selector){
 			var c_height = v_height
 			container.css({
 				'width' : Math.floor(v_width),
-				'height' : v_height,
-				'outline' : '15px solid #fff'
+				'height' : v_height
 			})
 		}
 		container.css({
 			'float' : 'left',
 		});
-		container.find('img').attr({
+		container.find('.project-item').attr({
 			'width' : '100%',
 			'height' : '100%'
 		});
@@ -69,7 +68,7 @@ function Gallery(selector){
 	var h_pxls = 0;
 	var v_ar;
 	// iterates through images looking for verticals
-	selector.children('img').each(function(){
+	selector.children('.project-item').each(function(){
 		if(parseInt($(this).attr('width')) < parseInt($(this).attr('height'))){
 			v_counter++;
 			h_pxls += $(this).attr('height');
@@ -83,7 +82,7 @@ function Gallery(selector){
 	var v_width = Math.floor((selector.width())/2);
 	var v_height = v_width*v_ar;
 	var sel = selector;
-	selector.children('img').each(function(){
+	selector.children('.project-item').each(function(){
 		if(parseInt($(this).attr('width')) > parseInt($(this).attr('height'))){
 			_this.add_module('horizontal', $(this));
 		}else{
@@ -91,7 +90,7 @@ function Gallery(selector){
 		}
 	})
 	$(window).bind('resize' , _this.resized);
-	$( "p.item" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
+	$( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
 }
 
 var gallery = new Gallery($('.content'));
