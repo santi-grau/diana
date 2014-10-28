@@ -82,30 +82,39 @@ a {
 }
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 body.modal-open {
   position: fixed;
   overflow-y: scroll;
 }
 header {
-  width: 1160px;
+  width: 100%;
   margin: 0 auto;
   height: 90px;
   padding-top: 37px;
-  z-index: 2;
-  position: relative;
+  z-index: 1000;
+  position: fixed;
   pointer-events: none;
+  background: #fff;
 }
-header #logo {
+header.header-projects .header-box {
+  width: 1160px;
+  margin: 0 auto;
+}
+header .header-box {
+  padding: 0px 43px 0 43px;
+}
+header .header-box #logo {
   float: left;
   display: block;
   pointer-events: auto;
 }
-header #logo img {
+header .header-box #logo img {
   display: block;
   float: left;
 }
-header #logo h2 {
+header .header-box #logo h2 {
   font-family: 'avenir_lt_std65_medium';
   text-transform: uppercase;
   font-size: 8px;
@@ -117,7 +126,7 @@ header #logo h2 {
   float: left;
   font-weight: normal;
 }
-header #main-title {
+header .header-box #main-title {
   font-family: 'aw_conqueror_didot_lightlight';
   font-weight: normal;
   text-transform: uppercase;
@@ -131,7 +140,7 @@ header #main-title {
   display: block;
   text-align: center;
 }
-header nav {
+header .header-box nav {
   float: right;
   font-family: 'avenir_lt_std65_medium';
   text-transform: uppercase;
@@ -141,25 +150,29 @@ header nav {
   letter-spacing: 2px;
   color: #000000;
 }
-header nav ul li a.active::before {
+header .header-box nav ul li a.active::before {
   content: ">> ";
 }
-header nav ul:hover li a::before {
+header .header-box nav ul:hover li a::before {
   content: none;
 }
-header nav ul li a:hover:before {
+header .header-box nav ul li a:hover:before {
   content: ">> ";
 }
-header nav ul li {
+header .header-box nav ul li {
   pointer-events: auto;
 }
 #main {
+  padding-top: 127px;
   margin: 0 auto;
 }
 #main .content {
-  width: 1215px;
+  /*width: 1215px;*/
   margin: 0 auto;
   margin-bottom: 5px;
+}
+#main .content.isotope {
+  margin-left: 15px;
 }
 #main .content.project {
   max-width: 805px;
@@ -230,27 +243,28 @@ header nav ul li {
 #main .content .item {
   display: block;
   float: left;
-  margin-bottom: 15px;
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover !important;
-  margin-right: 15px;
+  /*-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover !important;*/
+  width: 25%;
+  margin-bottom: 15px;
 }
-#main .content .item.c3 {
-  width: 395px;
-  height: 594px;
+#main .content .item:after {
+  width: 15px;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  content: "";
 }
-#main .content .item.c2 {
-  width: 805px;
-  height: 594px;
-}
-#main .content .item.c1 {
+#main .content .item img {
+  display: block;
   width: 100%;
-}
-#main .content .item.last {
-  margin-right: 0;
+  height: auto;
 }
 #main .content .item a {
   display: block;
@@ -263,7 +277,7 @@ header nav ul li {
   z-index: 1;
   top: 7%;
   left: 7%;
-  right: 7%;
+  right: 11%;
   bottom: 7%;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
@@ -395,9 +409,16 @@ footer a:hover {
 }
 @media only screen and (max-width: 1240px) {
   header {
-    width: 768px;
+    width: 100%;
   }
-  header #main-title {
+  header.home-header {
+    width: 100%;
+  }
+  header.header-projects .header-box {
+    width: 768px;
+    margin: 0 auto;
+  }
+  header .header-box #main-title {
     display: none;
   }
   #main .content {
@@ -415,14 +436,27 @@ footer a:hover {
     width: 395px;
     height: 594px;
   }
+  #main .content.isotope {
+    width: auto;
+  }
+  #main .content.isotope .item {
+    width: 33.3%;
+  }
   footer {
     max-width: 768px;
   }
 }
 @media only screen and (max-width: 850px) {
   header {
-    max-width: 480px;
     height: 90px;
+  }
+  header.home-header {
+    width: 100%;
+    max-width: 100%;
+  }
+  header.header-projects .header-box {
+    width: 480px;
+    margin: 0 auto;
   }
   header #main-title {
     display: none;
@@ -452,47 +486,60 @@ footer a:hover {
     width: 100%;
     height: 397px;
   }
+  #main .content.isotope {
+    width: auto;
+    max-width: inherit;
+  }
+  #main .content.isotope .item {
+    width: 50%;
+  }
   footer {
     max-width: 480px;
   }
 }
 @media only screen and (max-width: 570px) {
+  #main {
+    padding-top: 172px;
+  }
   header {
-    max-width: 300px;
     height: auto;
   }
-  header #logo {
+  header.home-header {
+    width: 100%;
+    max-width: 100%;
+  }
+  header .header-box {
+    padding: 0px 33px 0 40px;
+  }
+  header .header-box #logo {
     float: none;
   }
-  header #logo h2 {
+  header .header-box #logo h2 {
     margin-left: 16px;
     width: 119px;
   }
-  header #main-title {
+  header .header-box #main-title {
     display: none;
   }
-  header nav {
+  header .header-box nav {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: left;
     float: none;
   }
-  header nav ul li a.active::before {
+  header .header-box nav ul li a.active::before {
     content: "";
   }
-  header nav ul li a:hover:before {
+  header .header-box nav ul li a:hover:before {
     content: "";
   }
-  header nav ul li a.active::after {
+  header .header-box nav ul li a.active::after {
     content: " <<";
   }
-  header nav ul li a:hover:after {
+  header .header-box nav ul li a:hover:after {
     content: " <<";
   }
   #main .content {
-    max-width: 300px;
-  }
-  #main .content.project {
     max-width: 300px;
   }
   #main .content .gallery_container {
@@ -508,6 +555,16 @@ footer a:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+  #main .content.project {
+    max-width: 300px;
+  }
+  #main .content.isotope {
+    width: auto;
+    max-width: inherit;
+  }
+  #main .content.isotope .item {
+    width: 100%;
   }
   footer {
     max-width: 280px;

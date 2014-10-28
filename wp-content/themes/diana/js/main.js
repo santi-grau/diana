@@ -1,9 +1,10 @@
-$( function() {
-	$('.isotope').isotope({
-		itemSelector: '.item',
-		masonry: {
-			columnWidth: 10,
-		}
+$(window).load(function(){
+	$( function() {
+		$('.isotope').isotope({
+			itemSelector: '.item',
+			masonry: {
+			}
+		});
 	});
 });
 var modal = function(targetID){
@@ -17,5 +18,12 @@ var closeModal = function(){
 
 setTimeout(function() {
     $('footer a').attr('href', 'mailto:hello@diana-bada.com');
+	$( function() {
+		$('.isotope').isotope({
+			itemSelector: '.item',
+			masonry: {
+			}
+		});
+	});
 }, 100);
 
