@@ -39,5 +39,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+
+         <?php wp_footer(); ?> 
     </body>
 </html>

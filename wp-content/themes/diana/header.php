@@ -15,8 +15,27 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
+        <?php wp_head(); ?> 
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <header class="home-header">
+            <div class="header-box clearfix">
+                <a id="logo" href="/" class="clearfix">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
+                    <h2>PHOTO PRODUCTION <br/>ART DIRECTION <br/>& DESIGN</h2>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:void(0)" class="menuitem active">see all projects</a></li>
+                        <li><a href="javascript:void(0)" class="menuitem" onclick="modal('aboutModal')">about</a></li>
+                        <li><a href="javascript:void(0)" class="menuitem" onclick="modal('contactModal')">contact</a></li>
+                    </ul>
+                </nav>
+                <a id="main-title" href="javascript:void(0)" onclick="modaltoggle()"><?php the_title() ?></a>
+            </div>
+        </header>
+
+        <div id="main">

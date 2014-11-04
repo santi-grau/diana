@@ -9,11 +9,11 @@ function init(){
 function Gallery(selector){
 	this.add_module = function(type, image){
 		
-		var portrait_text = image.next('.like');
+		// var portrait_text = image.next('.like');
 		
 		var container = $('<div />' , {
 			'class' : 'gallery_container'
-		}).append(image).append(portrait_text);
+		}).append(image);
 		
 		if(type == 'horizontal'){
 			var h_ar = image.attr('height') / image.attr('width');
@@ -90,7 +90,7 @@ function Gallery(selector){
 		}
 	})
 	$(window).bind('resize' , _this.resized);
-	$( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
+	// $( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
 }
 
 var gallery = new Gallery($('.content'));

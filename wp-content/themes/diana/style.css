@@ -201,15 +201,15 @@ header .header-box nav ul li {
   opacity: 1;
 }
 #main .content .gallery_container::after {
-  border-right: 15px solid #ffffff;
-  position: absolute;
-  content: " ";
-  display: block;
-  height: 100%;
-  width: 15px;
-  right: -10px;
-  top: 0;
-  z-index: 10;
+  /*border-right: 15px solid #ffffff;
+				position: absolute;
+				content: " ";
+				display: block;
+				height: 100%;
+				width: 15px;
+				right: -10px;
+				top: 0;
+				z-index: 10;*/
 }
 #main .content .like {
   width: 13px;
