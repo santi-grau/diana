@@ -303,7 +303,7 @@ header .header-box nav ul li {
 }
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   opacity: 0;
   top: 100%;
   width: 100%;

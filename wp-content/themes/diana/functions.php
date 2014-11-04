@@ -16,6 +16,36 @@ function register_projects() {
 	);
 }
 
+add_action( 'init', 'contact' );
+function contact() {
+	register_post_type( 'contact',
+		array(
+			'labels' => array(
+				'name' => __( 'Contacto' )
+			),
+			'public' => true,
+			'supports' => array( 'title', 'editor'),
+			'hierarchical' => true,
+			'menu_position' => 4
+		)
+	);
+}
+
+add_action( 'init', 'about' );
+function about() {
+	register_post_type( 'about',
+		array(
+			'labels' => array(
+				'name' => __( 'About' )
+			),
+			'public' => true,
+			'supports' => array( 'title', 'editor'),
+			'hierarchical' => true,
+			'menu_position' => 4
+		)
+	);
+}
+
 /* Hide Menus */
 add_action('admin_head', 'hide_menus');
 function hide_menus() {
