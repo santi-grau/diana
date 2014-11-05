@@ -49,10 +49,12 @@ function about() {
 /* Hide Menus */
 add_action('admin_head', 'hide_menus');
 function hide_menus() {
-	$itemsToHide = array( "links", "posts", "comments", "media", "tools", "appearance", "users", "settings");
+	$itemsToHide = array( "links", "posts", "comments", "media", "tools", "appearance", "users");
 	for($i=0; $i<sizeof($itemsToHide); $i++){
 		echo "<style>#menu-".$itemsToHide[$i]."{display:none;}</style>";
 	}
 }
+
+remove_filter ('acf_the_content', 'wpautop');
 
 ?>

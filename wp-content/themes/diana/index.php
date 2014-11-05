@@ -13,7 +13,7 @@
 					<div class="item-info-shader"></div>
 					<div class="item-info">
 					<?php the_title() ?><br>
-					<span href="javascript:void(0)" class="like home-like"></span>
+					<span href="javascript:void(0)" class="like home-like fb-like" data-share="true" data-width="450" data-show-faces="true" ></span>
 					</div>
 				</div>
 			</a>
