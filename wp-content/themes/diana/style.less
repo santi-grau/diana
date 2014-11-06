@@ -258,12 +258,22 @@ header{
 				background: url(img/like-blanco.png);
 				background-size: 100%;
 				margin: 0 auto;
-				margin-top: 5px;
+				margin-top: 7px;
+				position: absolute;
+				left: 15px;
 				&:hover{
 					background: url(img/like-azul.png);
 					background-size: 100%;
 				}
+				&.active{
+					background: url(img/like-azul.png);
+					background-size: 100%;
+				}
 			}
+		}
+		.fb-like.fb-tr{
+			margin-left: 21px;
+			opacity: 0;
 		}
 		.item {
 			display: block;

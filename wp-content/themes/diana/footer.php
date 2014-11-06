@@ -37,7 +37,7 @@
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/project.js"></script>
 
-        <!-- <script>
+        <script>
           window.fbAsyncInit = function() {
             FB.init({
               appId      : '1495891790678492',
@@ -53,7 +53,7 @@
              js.src = "//connect.facebook.net/en_US/sdk.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
-        </script> -->
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

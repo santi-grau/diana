@@ -13,8 +13,10 @@
 					<div class="item-info-shader"></div>
 					<div class="item-info">
 					<?php the_title() ?><br>
-					<span href="javascript:void(0)" class="like home-like fb-like" data-share="true" data-width="450" data-show-faces="true" ></span>
+					<span href="javascript:void(0)" class="like home-like"></span>
+					<div class="fb-like" data-action="like" data-share="false" data-width="450" data-show-faces="false" data-href="<?php the_permalink() ?>" data-layout="button"></div>
 					</div>
+					
 				</div>
 			</a>
 	<?php endwhile; // end of the loop. ?>

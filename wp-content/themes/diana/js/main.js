@@ -25,5 +25,9 @@ setTimeout(function() {
 			}
 		});
 	});
+	$('.fb-like').addClass('fb-tr');
 }, 1000);
 
+$('.home-like').click(function(){
+	alert();
+})
