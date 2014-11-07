@@ -13,7 +13,13 @@ var modal = function(targetID){
 	$('#'+targetID).addClass('active');
 }
 var closeModal = function(){
-	$('.modal').removeClass('active')
+	$('.modal').removeClass('active');
+	$('body').toggleClass('modal-open');
+}
+function shareModal(){
+	$('body').toggleClass('modal-open');
+	$('.modal.active').removeClass('active');
+	$('.share-box').addClass('active');
 }
 
 setTimeout(function() {
@@ -25,9 +31,4 @@ setTimeout(function() {
 			}
 		});
 	});
-	$('.fb-like').addClass('fb-tr');
 }, 1000);
-
-$('.home-like').click(function(){
-	alert();
-})

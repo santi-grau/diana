@@ -296,6 +296,10 @@ header .header-box nav ul li {
   height: 100%;
   width: 100%;
 }
+#main .content .item .item-info-box .shader-link {
+  height: 100%;
+  width: 100%;
+}
 #main .content .item .item-info-box .item-info {
   font-family: 'avenir_lt_std65_medium';
   text-transform: uppercase;
@@ -312,6 +316,9 @@ header .header-box nav ul li {
   margin-top: -18px;
   display: block;
 }
+#main .content .item .item-info-box .item-info a {
+  color: #fff;
+}
 .modal {
   position: fixed;
   z-index: 100;
@@ -322,6 +329,9 @@ header .header-box nav ul li {
   transition: top 0s 0.5s, opacity 0.5s 0s;
   background: rgba(255, 255, 255, 0.8);
   text-align: center;
+}
+.modal.share-box {
+  background: rgba(255, 255, 255, 0.2);
 }
 .modal:before {
   content: '';
