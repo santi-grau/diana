@@ -37,6 +37,24 @@
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/project.js"></script>
 
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1495891790678492',
+              xfbml      : true,
+              version    : 'v2.2'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

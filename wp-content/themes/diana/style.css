@@ -362,6 +362,17 @@ header .header-box nav ul li {
 .modal .box p.justify {
   text-align: justify;
 }
+.modal .box.share-btn div {
+  vertical-align: top;
+  margin-top: -2px;
+  margin-right: 1px;
+}
+.modal .box.share-btn a {
+  margin-right: 1px;
+}
+.modal .box.share-btn .twitter-share-button {
+  width: 54px !important;
+}
 .modal.active {
   top: 0;
   opacity: 1;
