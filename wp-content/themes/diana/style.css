@@ -331,7 +331,8 @@ header .header-box nav ul li {
   text-align: center;
 }
 .modal.share-box {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
 }
 .modal:before {
   content: '';
@@ -375,6 +376,7 @@ header .header-box nav ul li {
 }
 .modal.active {
   top: 0;
+  left: 0;
   opacity: 1;
   transition: top 0s, opacity 0.5s;
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXhJREFUeNrMWE1PAkEMbfj/epSTCAuCIIqsoMCC4cbN/2A8mfgPOOBs0jG4wk5nt9PpS5rsx+zOS6ev7QwAwIexHejD3NhXfpEZOxh7UkTuBjn9Om6ED2YKyCXIJSu+uMcXzxrJFUlOIpC7xrnXroEDHJgKkmvjnAvqB9aTU0FBrH0/fBBQdwvneKv6g1FA4TgFQcUwgCftsq64fsgpnI6vIKgYMwjHqnUTKqiHNSpOl3tZXcJJYwjCN08+clYIbtwRPGkFsYxV3MuE066bhLlwquKoIVcUTtPYRayYc+ESiR3QgyxoMBLcn7lWgeTIc1cKOvM/6J1IJTYFvWghtyopi/PYW8NMuFXzirlXwti+dEx2KnQlVRoM8X5uHJpkj6GfCyYczq6Efd/d9RAEFX1gOgtKAhb+2mdBtwLNZuWKI7bBORIO2ZOUChGK5IQacwuQx8DlyZCC8BVOei7PbSA+/pGcxd4alsTkNr/5NPYO+pCH2vePAAMA4Qq1J1Y5XRMAAAAASUVORK5CYII=) 20 20, move;

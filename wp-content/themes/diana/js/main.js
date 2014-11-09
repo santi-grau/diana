@@ -16,10 +16,14 @@ var closeModal = function(){
 	$('.modal').removeClass('active');
 	$('body').toggleClass('modal-open');
 }
-function shareModal(){
+function shareModal(that){
+	$('body').toggleClass('modal-open');
+	$(that).parent().parent().next('.share-box').addClass('active');
+}
+function shareModalProject(that){
 	$('body').toggleClass('modal-open');
 	$('.modal.active').removeClass('active');
-	$('.share-box').addClass('active');
+	$(that).next('.modal').addClass('active');
 }
 
 setTimeout(function() {

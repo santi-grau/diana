@@ -10,10 +10,11 @@ function Gallery(selector){
 	this.add_module = function(type, image){
 		
 		var portrait_text = image.next('.like');
+		var modal_share = image.next().next('.modal');
 		
 		var container = $('<div />' , {
 			'class' : 'gallery_container'
-		}).append(image);
+		}).append(image).append(portrait_text).append(modal_share);
 		
 		if(type == 'horizontal'){
 			var h_ar = image.attr('height') / image.attr('width');

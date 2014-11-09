@@ -9,6 +9,15 @@
             $image_attributes = wp_get_attachment_image_src( $image, 'full' ); 
             ?>
             <img class="project-item" src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
+			<span class="like" onclick="shareModalProject(this)"></span>
+			<div class="modal" onclick="closeModal()" style="display:block">
+					<div class="box share-btn">
+					<p>Social</p>
+					<div class="fb-like" data-action="like" data-share="false" data-width="450" data-show-faces="false" data-href="<?php echo $image_attributes[0]; ?>" data-layout="button"></div>
+					<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $image_attributes[0]; ?>" style="width:54px;">Tweet</a>
+				</div>
+			</div>
 		
 		<?php elseif(get_row_layout() == "vimeo"): ?>
 
