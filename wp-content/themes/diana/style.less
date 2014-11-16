@@ -217,6 +217,9 @@ header{
 				letter-spacing: 2px;
 				color: @mainblack;
 				margin: 5px 0 15px 0;
+				&.clear{
+					clear: left;
+				}
 			}
 		}
 		.gallery_container{
@@ -349,7 +352,7 @@ header{
 
 .modal{
 	position: fixed;
-	z-index: 100;
+	z-index: 1000;
 	opacity: 0;
 	top : 100%;
 	width: 100%;
@@ -360,6 +363,11 @@ header{
 	&.share-box{
 		background: rgba(255,255,255,0.5);
 		z-index: 1000;
+	}
+	&.about-box{
+		p{
+			text-align: justify !important;
+		}
 	}
 	&:before{
 		content: '';
@@ -590,21 +598,29 @@ footer{
 
 @media only screen and (max-width : 570px) {
 	#main {
-		padding-top: 172px;
+		padding-top: 83px;
 	}
 	header{
 		height: auto;
+		padding-top: 37px;
 		&.home-header{
 			width: 100%;
 			max-width: 100%;
+			padding-top: 20px;
+			height: 63px;
 		}
 		.header-box{
-			padding: 0px 33px 0 40px;
+			padding: 0px 43px 0 43px;
 			#logo{
-				float: none;
+				float: left;
 				h2{
 					margin-left: 16px;
 					width: 119px;
+					margin-top: 0;
+				}
+				img{
+					width: 145px;
+					height: auto;
 				}
 			}
 			#main-title{
@@ -612,7 +628,99 @@ footer{
 			}
 			nav{
 				margin-top: 25px;
-				margin-bottom: 25px;
+				margin-bottom: 0px;
+				text-align: left;
+				float: right;
+				margin-top: 0;
+				ul{
+					li{
+						a{
+							&.active::before{
+								content: "";
+							}
+							&:hover:before{
+									content: "";
+							}
+							&.active::after{
+								content: " <<";
+							}
+							&:hover:after{
+									content: " <<";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#main{
+		.content{
+			max-width: 300px;
+			.gallery_container{
+				width: 100% !important;
+				height: auto !important;
+			}
+			.item{
+				&.c3{
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+				&.c2{
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+			&.project{
+				max-width: 300px;
+			}
+			&.isotope{
+				width: auto;
+				max-width: inherit;
+				.item{
+					width: 100%;
+				}
+			}
+		}
+	}
+	footer{
+		max-width: 280px;
+	}
+}
+
+
+@media only screen and (max-width : 479px) {
+	#main {
+		padding-top: 142px;
+	}
+	header{
+		height: auto;
+		&.home-header{
+			width: 100%;
+			max-width: 100%;
+			padding-top: 20px;
+		}
+		.header-box{
+			padding: 0px 20px 0 20px;
+			#logo{
+				float: none;
+				h2{
+					margin-left: 16px;
+					width: 119px;
+					margin-top: 0;
+				}
+				img{
+					width: 145px;
+					height: auto;
+				}
+			}
+			#main-title{
+				display: none;
+			}
+			nav{
+				margin-top: 25px;
+				margin-bottom: 0px;
 				text-align: left;
 				float: none;
 				ul{
@@ -671,6 +779,7 @@ footer{
 		max-width: 280px;
 	}
 }
+
 
 /* ==========================================================================
    Helper classes

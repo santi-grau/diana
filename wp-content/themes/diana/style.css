@@ -194,6 +194,9 @@ header .header-box nav ul li {
   color: #000000;
   margin: 5px 0 15px 0;
 }
+#main .content.project p.project-info.clear {
+  clear: left;
+}
 #main .content .gallery_container {
   position: relative;
   margin-bottom: 15px;
@@ -321,7 +324,7 @@ header .header-box nav ul li {
 }
 .modal {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   opacity: 0;
   top: 100%;
   width: 100%;
@@ -333,6 +336,9 @@ header .header-box nav ul li {
 .modal.share-box {
   background: rgba(255, 255, 255, 0.5);
   z-index: 1000;
+}
+.modal.about-box p {
+  text-align: justify !important;
 }
 .modal:before {
   content: '';
@@ -528,7 +534,89 @@ footer a:hover {
 }
 @media only screen and (max-width: 570px) {
   #main {
-    padding-top: 172px;
+    padding-top: 83px;
+  }
+  header {
+    height: auto;
+    padding-top: 37px;
+  }
+  header.home-header {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    height: 63px;
+  }
+  header .header-box {
+    padding: 0px 43px 0 43px;
+  }
+  header .header-box #logo {
+    float: left;
+  }
+  header .header-box #logo h2 {
+    margin-left: 16px;
+    width: 119px;
+    margin-top: 0;
+  }
+  header .header-box #logo img {
+    width: 145px;
+    height: auto;
+  }
+  header .header-box #main-title {
+    display: none;
+  }
+  header .header-box nav {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    text-align: left;
+    float: right;
+    margin-top: 0;
+  }
+  header .header-box nav ul li a.active::before {
+    content: "";
+  }
+  header .header-box nav ul li a:hover:before {
+    content: "";
+  }
+  header .header-box nav ul li a.active::after {
+    content: " <<";
+  }
+  header .header-box nav ul li a:hover:after {
+    content: " <<";
+  }
+  #main .content {
+    max-width: 300px;
+  }
+  #main .content .gallery_container {
+    width: 100% !important;
+    height: auto !important;
+  }
+  #main .content .item.c3 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #main .content .item.c2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #main .content.project {
+    max-width: 300px;
+  }
+  #main .content.isotope {
+    width: auto;
+    max-width: inherit;
+  }
+  #main .content.isotope .item {
+    width: 100%;
+  }
+  footer {
+    max-width: 280px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #main {
+    padding-top: 142px;
   }
   header {
     height: auto;
@@ -536,9 +624,10 @@ footer a:hover {
   header.home-header {
     width: 100%;
     max-width: 100%;
+    padding-top: 20px;
   }
   header .header-box {
-    padding: 0px 33px 0 40px;
+    padding: 0px 20px 0 20px;
   }
   header .header-box #logo {
     float: none;
@@ -546,13 +635,18 @@ footer a:hover {
   header .header-box #logo h2 {
     margin-left: 16px;
     width: 119px;
+    margin-top: 0;
+  }
+  header .header-box #logo img {
+    width: 145px;
+    height: auto;
   }
   header .header-box #main-title {
     display: none;
   }
   header .header-box nav {
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     text-align: left;
     float: none;
   }

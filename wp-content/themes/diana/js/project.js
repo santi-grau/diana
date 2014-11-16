@@ -24,6 +24,7 @@ function Gallery(selector){
 				'width' : c_width,
 				'height' : c_height
 			})
+			container.addClass('horizontal')
 		}
 		if(type == 'vertical'){
 			var c_width = v_width;
@@ -32,6 +33,7 @@ function Gallery(selector){
 				'width' : Math.floor(v_width),
 				'height' : v_height
 			})
+			container.addClass('vertical')
 		}
 		container.css({
 			'float' : 'left',
@@ -91,7 +93,15 @@ function Gallery(selector){
 		}
 	})
 	$(window).bind('resize' , _this.resized);
-	$( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
+	if( $('.gallery_container:nth-child(2)').hasClass( "vertical" ) ) {
+		$( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(3)" ) );
+	};
+	if( $('.gallery_container:nth-child(2)').hasClass( "horizontal" ) ) {
+		$( "p.project-info" ).insertAfter($( ".gallery_container:nth-child(2)" ) );
+	};
+	if( $('.gallery_container').length < 2 ) {
+		$( "p.project-info" ).addClass('clear').insertAfter($( ".gallery_container:nth-child(2)" ) );
+	};
 }
 
 var gallery = new Gallery($('.content'));
