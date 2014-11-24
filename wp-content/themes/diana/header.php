@@ -25,7 +25,7 @@
         <![endif]-->
         <header class="home-header">
             <div class="header-box clearfix">
-                <a id="logo" href="/" class="clearfix">
+                <a id="logo" href="<?php echo site_url(); ?>" class="clearfix">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
                     <h2>PHOTO PRODUCTION <br/>ART DIRECTION <br/>& DESIGN</h2>
                 </a>

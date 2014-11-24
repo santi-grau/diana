@@ -366,6 +366,11 @@ header{
 		z-index: 1000;
 	}
 	&.about-box{
+		.box{
+			height: 400px;
+			overflow-y: scroll;
+			padding-right: 15px;
+		}
 		p{
 			text-align: justify !important;
 		}
@@ -382,9 +387,6 @@ header{
 		display: inline-block;
 		vertical-align: middle;
 		cursor: default;
-		height: 400px;
-		overflow-y: scroll;
-		padding-right: 15px;
 		img{
 			display: inline;
 			margin-bottom: 40px;
@@ -485,15 +487,15 @@ a, a:active, a:focus {
 	transition: @property  @time @easing;
 }
 
-.modal .box::-webkit-scrollbar-track{
+.modal.about-box .box::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
-.modal .box::-webkit-scrollbar{
+.modal.about-box .box::-webkit-scrollbar{
 	width: 6px;
 	background-color: #F5F5F5;
 }
-.modal .box::-webkit-scrollbar-thumb{
+.modal.about-box .box::-webkit-scrollbar-thumb{
 	background-color: #000000;
 }
 

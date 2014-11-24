@@ -44,7 +44,7 @@
 								<p>Social</p>
 								<div class="fb-like" data-action="like" data-share="false" data-width="450" data-show-faces="false" data-href="<?php the_permalink() ?>" data-layout="button"></div>
 								<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-								<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink ?>" style="width:54px;">Tweet</a>					
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink() ?>" style="width:54px;">Tweet</a>					
 							</div>
 						</div>
 					</div>
