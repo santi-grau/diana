@@ -25,6 +25,13 @@ function shareModalProject(that){
 	$('.modal.active').removeClass('active');
 	$(that).next('.modal').addClass('active');
 }
+function scrollup(){
+    $("html, body").animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+}
+
 
 setTimeout(function() {
     $('footer a').attr('href', 'mailto:hello@diana-bada.com');
