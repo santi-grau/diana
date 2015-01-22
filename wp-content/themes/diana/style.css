@@ -106,41 +106,33 @@ header .header-box {
   padding: 0px 43px 0 43px;
 }
 header .header-box #logo {
-  float: left;
-  display: block;
-  pointer-events: auto;
-}
-header .header-box #logo img {
-  display: block;
-  float: left;
-}
-header .header-box #logo h2 {
-  font-family: 'avenir_lt_std65_medium';
-  text-transform: uppercase;
-  font-size: 8px;
-  line-height: 12px;
-  letter-spacing: 2px;
-  color: #B0B2B3;
-  margin-left: 40px;
-  display: block;
-  float: left;
-  font-weight: normal;
-  width: 120px;
-}
-header .header-box #main-title {
-  font-family: 'aw_conqueror_didot_lightlight';
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 6px;
-  color: #000000;
   width: 340px;
   margin: 0 auto;
-  margin-top: 17px;
   display: block;
   text-align: center;
   pointer-events: auto;
+}
+header .header-box #logo h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 3.6px;
+  color: #433A45;
+}
+header .header-box #main-title {
+  font-family: 'avenir_lt_std65_medium';
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 8px;
+  line-height: 14px;
+  letter-spacing: 4px;
+  color: #000000;
+  margin-top: 17px;
+  pointer-events: auto;
+  float: left;
+  display: block;
 }
 header .header-box nav {
   float: right;
@@ -173,7 +165,7 @@ header .header-box nav ul li {
   margin-bottom: 5px;
 }
 #main .content.isotope {
-  margin-left: 15px;
+  margin-left: 7px;
 }
 #main .content.project {
   max-width: 805px;
@@ -206,13 +198,13 @@ header .header-box nav ul li {
   opacity: 1;
 }
 #main .content .gallery_container::after {
-  border-right: 15px solid #ffffff;
+  border-left: 15px solid #ffffff;
   position: absolute;
   content: " ";
   display: block;
   height: 100%;
   width: 15px;
-  right: -10px;
+  right: -22px;
   top: 0;
   z-index: 10;
 }
@@ -222,7 +214,7 @@ header .header-box nav ul li {
   display: block;
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 18px;
   z-index: 100;
   background: url(img/like-gris.png);
   background-size: 100%;
@@ -262,14 +254,25 @@ header .header-box nav ul li {
   margin-bottom: 15px;
 }
 #main .content .item:after {
-  width: 15px;
-  height: 100%;
+  width: 7.5px;
+  height: 110%;
   background: #ffffff;
   position: absolute;
-  top: 0;
+  top: -7.5px;
   right: 0;
   z-index: 100;
   content: "";
+}
+#main .content .item:before {
+  border-left: 15px solid #ffffff;
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 100%;
+  width: 7.5px;
+  left: -7.5px;
+  top: 0;
+  z-index: 10;
 }
 #main .content .item img {
   display: block;
@@ -287,7 +290,7 @@ header .header-box nav ul li {
   z-index: 1;
   top: 7%;
   left: 7%;
-  right: 11%;
+  right: 7%;
   bottom: 7%;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
@@ -339,9 +342,7 @@ header .header-box nav ul li {
   z-index: 1000;
 }
 .modal.about-box .box {
-  height: 400px;
-  overflow-y: scroll;
-  padding-right: 15px;
+  width: 300px;
 }
 .modal.about-box p {
   text-align: justify !important;
@@ -358,6 +359,7 @@ header .header-box nav ul li {
   display: inline-block;
   vertical-align: middle;
   cursor: default;
+  margin-top: -126px;
 }
 .modal .box img {
   display: inline;
@@ -387,7 +389,7 @@ header .header-box nav ul li {
   width: 54px !important;
 }
 .modal.active {
-  top: 0;
+  top: 126px;
   left: 0;
   opacity: 1;
   transition: top 0s, opacity 0.5s;

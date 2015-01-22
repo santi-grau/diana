@@ -4,7 +4,6 @@
     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="modal about-box" id="aboutModal" onclick="closeModal()">
             <div class="box">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
                 <p class="justify"><?php the_field('texto') ?></p>
             </div>
         </div>
@@ -15,7 +14,6 @@
     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="modal contact-box" id="contactModal" onclick="closeModal()">
             <div class="box">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
                 <p><?php the_field('informacion') ?></p>
                 <ul class="social-icons">
                     <li><a class="social fb" href="http://<?php the_field('facebook') ?>" target="_blank"></a></li>

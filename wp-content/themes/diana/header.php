@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
         <?php wp_head(); ?> 
     </head>
@@ -25,10 +26,6 @@
         <![endif]-->
         <header class="home-header">
             <div class="header-box clearfix">
-                <a id="logo" href="<?php echo site_url(); ?>" class="clearfix">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" width="165" height="45">
-                    <h2>PHOTO PRODUCTION <br/>ART DIRECTION <br/>& DESIGN</h2>
-                </a>
                 <nav>
                     <ul>
                         <li><a href="<?php echo site_url(); ?>" class="menuitem active">see all projects</a></li>
@@ -36,7 +33,11 @@
                         <li><a href="javascript:void(0)" class="menuitem" onclick="modal('contactModal')">contact</a></li>
                     </ul>
                 </nav>
-                <a id="main-title" href="javascript:void(0)" onclick="scrollup()"><?php the_title() ?></a>
+                <a id="main-title" href="javascript:void(0)" onclick="scrollup();closeModal()"><?php the_title() ?></a>
+                <a id="logo" href="<?php echo site_url(); ?>" class="clearfix">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-diana-bada.png" width="253" height="16">
+                    <h2>PHOTOPRODUCTION & DESIGN</h2>
+                </a>
             </div>
         </header>
 

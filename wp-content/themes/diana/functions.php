@@ -49,7 +49,7 @@ function about() {
 /* Hide Menus */
 add_action('admin_head', 'hide_menus');
 function hide_menus() {
-	$itemsToHide = array( "links", "posts", "comments", "media", "tools", "appearance", "users", "settings", "plugins");
+	$itemsToHide = array( "links", "posts", "comments", "tools", "appearance", "users", "settings", "plugins");
 	for($i=0; $i<sizeof($itemsToHide); $i++){
 		echo "<style>#menu-".$itemsToHide[$i]."{display:none;}</style>";
 	}
