@@ -12,9 +12,25 @@
 				<?php if( get_field('coming_soon') ) { ?>
 			
 					<div class="item">
-						<?php $image = get_field('imagen_destacada'); ?>
+						<?php $image = get_field('imagen_destacada');
+							
+						if( !empty($image) );
+
+						// vars
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+					
+						// thumbnail
+						$size = 'large';
+						$thumb = $image['sizes'][ $size ];
+						$width = $image['sizes'][ $size . '-width' ];
+						$height = $image['sizes'][ $size . '-height' ];
+						
+						?>
+						
 						<?php if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
 						<?php endif; ?>
 						<div class="item-info-box">
 							<div class="item-info-shader"></div>
@@ -28,9 +44,26 @@
 				<?php } else { ?>
 			
 					<div class="item">
-						<?php $image = get_field('imagen_destacada'); ?>
+						<?php $image = get_field('imagen_destacada');
+							
+						if( !empty($image) );
+
+						// vars
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+					
+						// thumbnail
+						$size = 'large';
+						$thumb = $image['sizes'][ $size ];
+						$width = $image['sizes'][ $size . '-width' ];
+						$height = $image['sizes'][ $size . '-height' ];
+						
+						?>
+						
 						<?php if( !empty($image) ): ?>
-							<a href="<?php the_permalink(); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></a>
+							<a href="<?php the_permalink(); ?>">
+							<img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" /></a>
 						<?php endif; ?>
 						<div class="item-info-box">
 							<a class="shader-link" href="<?php the_permalink(); ?>"><div class="item-info-shader"></div></a>

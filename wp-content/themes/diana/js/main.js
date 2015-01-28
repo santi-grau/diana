@@ -11,6 +11,8 @@ var modal = function(targetID){
 	$('body').toggleClass('modal-open');
 	$('.modal.active').removeClass('active');
 	$('#'+targetID).addClass('active');
+	$('header nav.mobile-nav').fadeOut(100);
+	$(this).hide();
 }
 var closeModal = function(){
 	$('.modal').removeClass('active');
@@ -30,6 +32,10 @@ function scrollup(){
         scrollTop: 0
     }, 500);
     return false;
+}
+function mobileMenu(){
+	$('header nav').fadeToggle(300).addClass('mobile-nav');
+	$('.modal.active').removeClass('active');
 }
 
 

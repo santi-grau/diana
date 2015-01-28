@@ -127,8 +127,11 @@ header{
 	}
 	.header-box{
 		padding: 0px 43px 0 43px;
+		.mobile-menu{
+			display: none;
+		}
 		#logo{
-			width: 340px;
+			width: 253px;
 			margin: 0 auto;
 			display: block;
 			text-align: center;
@@ -193,7 +196,7 @@ header{
 			margin-left: 7px;
 		}
 		&.project{
-			max-width: 805px;
+			max-width: 815px;
 			.item{
 				cursor: default;
 				img{
@@ -218,6 +221,12 @@ header{
 		.gallery_container{
 			position: relative;
 			margin-bottom: 15px;
+			overflow: hidden;
+			img{
+				height: auto;
+				width: 113%;
+				margin-left: -20px;
+			}
 			&:hover{
 				.like{
 					opacity: 1;
@@ -230,7 +239,7 @@ header{
 				display: block;
 				height: 100%;
 				width: 15px;
-				right: -22px;
+				right: -15px;
 				top: 0;
 				z-index: 10;
 			}
@@ -241,7 +250,7 @@ header{
 			display: block;
 			position: absolute;
 			top: 15px;
-			right: 18px;
+			right: 25px;
 			z-index: 100;
 			background: url(img/like-gris.png);
 			background-size: 100%;
@@ -292,10 +301,10 @@ header{
 				position: absolute;
 				content: " ";
 				display: block;
-				height: 100%;
+				height: 110%;
 				width: 7.5px;
 				left: -7.5px;
-				top: 0;
+				top: -7.5px;
 				z-index: 10;
 			}
 			img{
@@ -450,6 +459,9 @@ header{
 			&.tw{
 				background: url(img/social-tw.png);
 			}
+			&.lk{
+				background: url(img/social-lk.png);
+			}
 			&.vimeo{
 				background: url(img/social-vimeo.png);
 			}
@@ -513,6 +525,8 @@ a, a:active, a:focus {
 		width: 100%;
 		&.home-header{
 			width: 100%;
+			padding-top: 30px;
+			height: 70px;
 		}
 		&.header-projects{
 			.header-box{
@@ -522,13 +536,17 @@ a, a:active, a:focus {
 		}
 		.header-box{
 			#main-title{
-				display: none;
+				max-width: 180px;
 			}
 		}
 	}
 	#main{
+		padding-top: 110px;
 		.content{
 			width: 822px;
+			.like{
+				opacity: 1;
+			}
 			.item{
 				&.c3{
 					width: 264px;
@@ -637,13 +655,13 @@ a, a:active, a:focus {
 			padding: 0px 43px 0 43px;
 			#logo{
 				float: left;
+				text-align: left;
+				margin-top: 5px;
 				h2{
-					margin-left: 16px;
-					width: 119px;
-					margin-top: 0;
+					text-align: left;
 				}
 				img{
-					width: 145px;
+					width: 165px;
 					height: auto;
 				}
 			}
@@ -702,10 +720,24 @@ a, a:active, a:focus {
 			&.isotope{
 				width: auto;
 				max-width: inherit;
+				margin-right: 7px;
 				.item{
 					width: 100%;
 				}
 			}
+		}
+	}
+	.modal.active{
+		top: 106px;
+		background: rgba(255, 255, 255, 0.9);
+	}
+	#aboutModal .box{
+		width: 280px;
+		margin-top: -100px;
+		p{
+			font-size: 8px;
+			line-height: 14px;
+			letter-spacing: 0.5px;
 		}
 	}
 	footer{
@@ -715,27 +747,31 @@ a, a:active, a:focus {
 
 
 @media only screen and (max-width : 479px) {
-	#main {
-		padding-top: 142px;
-	}
 	header{
 		height: auto;
 		&.home-header{
 			width: 100%;
 			max-width: 100%;
-			padding-top: 20px;
+			padding-top: 15px;
+			height: 100px;
+			pointer-events: auto;
 		}
 		.header-box{
-			padding: 0px 20px 0 20px;
+			padding: 0;
+			display: table;
+			width: 100%;
 			#logo{
+				width: 200px;
+				margin-top: 4px;
 				float: none;
+				display: table-header-group;
+				text-align: center;
 				h2{
-					margin-left: 16px;
-					width: 119px;
-					margin-top: 0;
+					margin-bottom: 10px;
+					text-align: center;
 				}
 				img{
-					width: 145px;
+					width: 200px;
 					height: auto;
 				}
 			}
@@ -743,10 +779,18 @@ a, a:active, a:focus {
 				display: none;
 			}
 			nav{
-				margin-top: 25px;
-				margin-bottom: 0px;
 				text-align: left;
-				float: none;
+				/*float: none;
+				display: table-footer-group;*/
+				position: absolute;
+				bottom: -57px;
+				z-index: 10;
+				background: #fff;
+				width: 100%;
+				padding: 5px 15px;
+				font-size: 9px;
+				line-height: 14px;
+				display: none;
 				ul{
 					li{
 						a{
@@ -766,9 +810,24 @@ a, a:active, a:focus {
 					}
 				}
 			}
+			.mobile-menu{
+				display: block;
+				padding: 9px 0 8px;
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				margin: 0 15px 0 15px;
+				font-family: 'avenir_lt_std65_medium';
+				text-transform: uppercase;
+				font-size: 10px;
+				line-height: 12px;
+				letter-spacing: 1px;
+				color: #000000;
+				margin-top: 7px;
+			}
 		}
 	}
 	#main{
+		padding-top: 112px;
 		.content{
 			max-width: 300px;
 			.gallery_container{
@@ -793,6 +852,7 @@ a, a:active, a:focus {
 			&.isotope{
 				width: auto;
 				max-width: inherit;
+				margin-right: 7px;
 				.item{
 					width: 100%;
 				}

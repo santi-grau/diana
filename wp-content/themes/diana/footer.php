@@ -17,7 +17,7 @@
                 <p><?php the_field('informacion') ?></p>
                 <ul class="social-icons">
                     <li><a class="social fb" href="http://<?php the_field('facebook') ?>" target="_blank"></a></li>
-                    <li><a class="social tw" href="http://<?php the_field('twitter') ?>" target="_blank"></a></li>
+                    <li><a class="social lk" href="http://<?php the_field('twitter') ?>" target="_blank"></a></li>
                     <li><a class="social vimeo" href="http://<?php the_field('vimeo') ?>" target="_blank"></a></li>
                     <li><a class="social ig" href="http://<?php the_field('instagram') ?>" target="_blank"></a></li>
                 </ul>
@@ -55,7 +55,8 @@
 
         <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
 
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script>
+	        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

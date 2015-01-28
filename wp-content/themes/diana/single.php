@@ -6,7 +6,7 @@
 			
 			<?php 
             $image = get_sub_field('imagen');
-            $image_attributes = wp_get_attachment_image_src( $image, 'full' ); 
+            $image_attributes = wp_get_attachment_image_src( $image, 'large' ); 
             ?>
             <img class="project-item" src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
 			<span class="like" onclick="shareModalProject(this)"></span>
@@ -30,3 +30,7 @@
 </div>
 
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+	$('nav ul li a').removeClass('active');
+</script>

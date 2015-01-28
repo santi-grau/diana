@@ -102,6 +102,9 @@ function Gallery(selector){
 	if( $('.gallery_container').length < 2 ) {
 		$( "p.project-info" ).addClass('clear').insertAfter($( ".gallery_container:nth-child(2)" ) );
 	};
+	$("img[src*='blanc']").each(function () {
+   $(this).next('.like').hide();
+	});
 }
 
 var gallery = new Gallery($('.content'));
